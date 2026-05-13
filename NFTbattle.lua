@@ -8,7 +8,6 @@ local Window = Rayfield:CreateWindow({
    KeySystem = false
 })
 
-
 local autoSellEnabled = false
 local sellInterval = 5
 
@@ -19,6 +18,7 @@ local BeggarTab = Window:CreateTab("Beggar Case", "package")
 local PlodderTab = Window:CreateTab("Plodder Case", "package")
 local OfficeTab = Window:CreateTab("Office Clerk", "package")
 local ManagerTab = Window:CreateTab("Manager", "package")
+local GoldTab = Window:CreateTab("Gold", "star") -- Добавлена вкладка Gold
 local FrozenTab = Window:CreateTab("Frozen Heart", "star")
 local BubbleTab = Window:CreateTab("Bubble Gum", "star")
 local CatsTab = Window:CreateTab("Cats", "star")
@@ -118,12 +118,12 @@ local function AddFarmButtons(tab, caseInternalName)
 end
 
 -- Buttons
-
 AddFarmButtons(TrashTab, "Trash")
 AddFarmButtons(BeggarTab, "Beggar")
 AddFarmButtons(PlodderTab, "Plodder")
 AddFarmButtons(OfficeTab, "Office Clerk")
 AddFarmButtons(ManagerTab, "Manager")
+AddFarmButtons(GoldTab, "Gold") -- Кнопки для кейса Gold
 AddFarmButtons(FrozenTab, "Frozen Heart")
 AddFarmButtons(BubbleTab, "Bubble Gum")
 AddFarmButtons(CatsTab, "Cats")
@@ -137,6 +137,7 @@ AddFarmButtons(G63Tab, "G63")
 AddFarmButtons(PorscheTab, "Porsche 911")
 AddFarmButtons(UrusTab, "URUS")
 AddFarmButtons(CyberTab, "Cyber")
+
 CreditsTab:CreateButton({
    Name = "Git Hub",
    Callback = function()
