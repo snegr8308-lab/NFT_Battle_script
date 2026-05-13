@@ -1,5 +1,5 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
---Loading
+
 local Window = Rayfield:CreateWindow({
    Name = "NFT battle script",
    LoadingTitle = "Loading...",
@@ -19,13 +19,21 @@ local BeggarTab = Window:CreateTab("Beggar Case", "package")
 local PlodderTab = Window:CreateTab("Plodder Case", "package")
 local OfficeTab = Window:CreateTab("Office Clerk", "package")
 local ManagerTab = Window:CreateTab("Manager", "package")
+local FrozenTab = Window:CreateTab("Frozen Heart", "star")
+local BubbleTab = Window:CreateTab("Bubble Gum", "star")
+local CatsTab = Window:CreateTab("Cats", "star")
+local GlitchTab = Window:CreateTab("Glitch", "star")
+local DreamTab = Window:CreateTab("Dream", "star")
+local BloodyTab = Window:CreateTab("Bloody Night", "star")
+local NinjaTab = Window:CreateTab("Ninja Turtles", "star")
+local DeskTab = Window:CreateTab("Desk Calendars", "star")
 local M5Tab = Window:CreateTab("M5 F90", "car")
 local G63Tab = Window:CreateTab("G63", "car")
 local PorscheTab = Window:CreateTab("Porsche 911", "car")
 local UrusTab = Window:CreateTab("URUS", "car")
 local CyberTab = Window:CreateTab("Cyber", "car")
-local CreditsTab = Window:CreateTab("Credits", "info")
 
+local CreditsTab = Window:CreateTab("Credits", "info")
 
 local function ServerSell()
     local args = {
@@ -33,23 +41,20 @@ local function ServerSell()
         "ALL",
         false
     }
-    
     pcall(function()
         game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Inventory"):FireServer(unpack(args))
     end)
 end
 
-
+-- Функция открытия кейсов
 local function StartFarm(caseName, iterations)
     local count = 0
     while count < iterations do
         local openArgs = { caseName, 10 }
         
-        
         pcall(function()
             game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("OpenCase"):InvokeServer(unpack(openArgs))
         end)
-        
         
         if not autoSellEnabled then
             ServerSell()
@@ -59,7 +64,6 @@ local function StartFarm(caseName, iterations)
         count = count + 1
     end
 end
-
 
 task.spawn(function()
     while true do
@@ -93,15 +97,15 @@ MainTab:CreateButton({
    Callback = function() Rayfield:Destroy() end,
 })
 
--- Open cases settings 
+-- Open cases settings
 local function AddFarmButtons(tab, caseInternalName)
     local amounts = {
-        {Name = "Open 10B Cases", Val = 1000000000},
-        {Name = "Open 100K Cases", Val = 10000},
-        {Name = "Open 10K Cases", Val = 1000},
-        {Name = "Open 1K Cases", Val = 100},
-        {Name = "Open 100 Cases", Val = 10},
-        {Name = "Open 10 Cases", Val = 1}
+        {Name = "Farm 10B Cases", Val = 1000000000},
+        {Name = "Farm 100K Cases", Val = 10000},
+        {Name = "Farm 10K Cases", Val = 1000},
+        {Name = "Farm 1K Cases", Val = 100},
+        {Name = "Farm 100 Cases", Val = 10},
+        {Name = "Farm 10 Cases", Val = 1}
     }
     for _, data in ipairs(amounts) do
         tab:CreateButton({
@@ -114,18 +118,25 @@ local function AddFarmButtons(tab, caseInternalName)
 end
 
 -- Buttons
+
 AddFarmButtons(TrashTab, "Trash")
 AddFarmButtons(BeggarTab, "Beggar")
 AddFarmButtons(PlodderTab, "Plodder")
 AddFarmButtons(OfficeTab, "Office Clerk")
 AddFarmButtons(ManagerTab, "Manager")
+AddFarmButtons(FrozenTab, "Frozen Heart")
+AddFarmButtons(BubbleTab, "Bubble Gum")
+AddFarmButtons(CatsTab, "Cats")
+AddFarmButtons(GlitchTab, "Glitch")
+AddFarmButtons(DreamTab, "Dream")
+AddFarmButtons(BloodyTab, "Bloody Night")
+AddFarmButtons(NinjaTab, "Ninja Turtles")
+AddFarmButtons(DeskTab, "Desk Calendars")
 AddFarmButtons(M5Tab, "M5 F90")
 AddFarmButtons(G63Tab, "G63")
 AddFarmButtons(PorscheTab, "Porsche 911")
 AddFarmButtons(UrusTab, "URUS")
 AddFarmButtons(CyberTab, "Cyber")
-
-
 CreditsTab:CreateButton({
    Name = "Git Hub",
    Callback = function()
@@ -135,5 +146,5 @@ CreditsTab:CreateButton({
 })
 
 Rayfield:Notify({Title = "Success", Content = "Thanks for using♥️", Duration = 3})
--- YOU CAN GET BAN FOR THIS SCRIPT
+-- YOU CAN GET BAN FOR THIS SCRIPT 
 -- USE THIS ON YOUR OWN RISK
