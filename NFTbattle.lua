@@ -1,5 +1,5 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-
+--Loading
 local Window = Rayfield:CreateWindow({
    Name = "NFT battle script",
    LoadingTitle = "Loading...",
@@ -8,7 +8,7 @@ local Window = Rayfield:CreateWindow({
    KeySystem = false
 })
 
--- Переменные управления
+
 local autoSellEnabled = false
 local sellInterval = 5
 
@@ -70,9 +70,9 @@ task.spawn(function()
     end
 end)
 
-
+-- Auto Sell
 MainTab:CreateToggle({
-   Name = "Auto Sell (Server Side)",
+   Name = "Auto Sell",
    CurrentValue = false,
    Callback = function(Value)
       autoSellEnabled = Value
@@ -93,15 +93,15 @@ MainTab:CreateButton({
    Callback = function() Rayfield:Destroy() end,
 })
 
-
+-- Open cases settings 
 local function AddFarmButtons(tab, caseInternalName)
     local amounts = {
-        {Name = "Farm 1M Cases", Val = 100000},
-        {Name = "Farm 100K Cases", Val = 10000},
-        {Name = "Farm 10K Cases", Val = 1000},
-        {Name = "Farm 1K Cases", Val = 100},
-        {Name = "Farm 100 Cases", Val = 10},
-        {Name = "Farm 10 Cases", Val = 1}
+        {Name = "Open 10B Cases", Val = 1000000000},
+        {Name = "Open 100K Cases", Val = 10000},
+        {Name = "Open 10K Cases", Val = 1000},
+        {Name = "Open 1K Cases", Val = 100},
+        {Name = "Open 100 Cases", Val = 10},
+        {Name = "Open 10 Cases", Val = 1}
     }
     for _, data in ipairs(amounts) do
         tab:CreateButton({
@@ -113,7 +113,7 @@ local function AddFarmButtons(tab, caseInternalName)
     end
 end
 
-
+-- Buttons
 AddFarmButtons(TrashTab, "Trash")
 AddFarmButtons(BeggarTab, "Beggar")
 AddFarmButtons(PlodderTab, "Plodder")
@@ -134,6 +134,6 @@ CreditsTab:CreateButton({
    end,
 })
 
-Rayfield:Notify({Title = "Success", Content = "Script Loaded (Server-Sell Mode)", Duration = 3})
+Rayfield:Notify({Title = "Success", Content = "Thanks for using♥️", Duration = 3})
 -- YOU CAN GET BAN FOR THIS SCRIPT
 -- USE THIS ON YOUR OWN RISK
