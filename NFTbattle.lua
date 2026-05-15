@@ -8,7 +8,7 @@ local Window = Rayfield:CreateWindow({
    LoadingTitle = "Loading...",
    LoadingSubtitle = "by bELKAopex",
    ConfigurationSaving = { Enabled = false },
-   KeySystem = true
+   KeySystem = false
 })
 
 local autoSellEnabled = false
