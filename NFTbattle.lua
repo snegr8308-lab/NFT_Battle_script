@@ -1,3 +1,6 @@
+-- This script are free and have no key!
+-- You can use this script and change
+-- If NFT battle have new update and script dont work, write me on git hub
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
@@ -32,9 +35,8 @@ local G63Tab = Window:CreateTab("G63", "car")
 local PorscheTab = Window:CreateTab("Porsche 911", "car")
 local UrusTab = Window:CreateTab("URUS", "car")
 local CyberTab = Window:CreateTab("Cyber", "car")
-
 local CreditsTab = Window:CreateTab("Credits", "info")
-
+-- End tabs
 local function ServerSell()
     local args = {
         "Sell",
@@ -46,7 +48,7 @@ local function ServerSell()
     end)
 end
 
--- Функция открытия кейсов
+-- Auto cases open function 
 local function StartFarm(caseName, iterations)
     local count = 0
     while count < iterations do
@@ -73,7 +75,7 @@ task.spawn(function()
         task.wait(sellInterval)
     end
 end)
-
+-- End auto cases open function 
 -- Auto Sell
 MainTab:CreateToggle({
    Name = "Auto Sell",
@@ -85,13 +87,13 @@ MainTab:CreateToggle({
 
 MainTab:CreateSlider({
    Name = "Sell Interval",
-   Range = {1, 30},
+   Range = {1, 60},
    Increment = 1,
-   Suffix = "s",
-   CurrentValue = 5,
+   Suffix = "sec",
+   CurrentValue = 10,
    Callback = function(Value) sellInterval = Value end,
 })
-
+-- End auto sell
 MainTab:CreateButton({
    Name = "Destroy GUI",
    Callback = function() Rayfield:Destroy() end,
@@ -116,14 +118,14 @@ local function AddFarmButtons(tab, caseInternalName)
         })
     end
 end
-
+-- End open cases settings
 -- Buttons
 AddFarmButtons(TrashTab, "Trash")
 AddFarmButtons(BeggarTab, "Beggar")
 AddFarmButtons(PlodderTab, "Plodder")
 AddFarmButtons(OfficeTab, "Office Clerk")
 AddFarmButtons(ManagerTab, "Manager")
-AddFarmButtons(GoldTab, "Gold") -- Кнопки для кейса Gold
+AddFarmButtons(GoldTab, "Gold")
 AddFarmButtons(FrozenTab, "Frozen Heart")
 AddFarmButtons(BubbleTab, "Bubble Gum")
 AddFarmButtons(CatsTab, "Cats")
@@ -137,7 +139,7 @@ AddFarmButtons(G63Tab, "G63")
 AddFarmButtons(PorscheTab, "Porsche 911")
 AddFarmButtons(UrusTab, "URUS")
 AddFarmButtons(CyberTab, "Cyber")
-
+-- End buttons
 CreditsTab:CreateButton({
    Name = "Git Hub",
    Callback = function()
@@ -146,6 +148,6 @@ CreditsTab:CreateButton({
    end,
 })
 
-Rayfield:Notify({Title = "Success", Content = "Thanks for using♥️", Duration = 3})
+Rayfield:Notify({Title = "Success", Content = "Thanks for using♥️", Duration = 6})
 -- YOU CAN GET BAN FOR THIS SCRIPT 
 -- USE THIS ON YOUR OWN RISK
