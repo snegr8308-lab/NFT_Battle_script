@@ -36,8 +36,6 @@ local PorscheTab = Window:CreateTab("Porsche 911", "car")
 local UrusTab = Window:CreateTab("URUS", "car")
 local CyberTab = Window:CreateTab("Cyber", "car")
 local CreditsTab = Window:CreateTab("Credits", "info")
--- End tabs
-
 
 local function ServerSell()
     local args = {
@@ -77,8 +75,6 @@ task.spawn(function()
         task.wait(sellInterval)
     end
 end)
--- End auto cases open function 
-
 
 -- Auto Sell
 MainTab:CreateToggle({
@@ -98,8 +94,6 @@ MainTab:CreateSlider({
    CurrentValue = 5,
    Callback = function(Value) sellInterval = Value end,
 })
--- End auto sell
-
 
 MainTab:CreateButton({
    Name = "Destroy GUI",
@@ -126,8 +120,6 @@ local function AddFarmButtons(tab, caseInternalName)
         })
     end
 end
--- End open cases settings
-
 
 -- Buttons
 AddFarmButtons(TrashTab, "Trash")
@@ -149,8 +141,6 @@ AddFarmButtons(G63Tab, "G63")
 AddFarmButtons(PorscheTab, "Porsche 911")
 AddFarmButtons(UrusTab, "URUS")
 AddFarmButtons(CyberTab, "Cyber")
--- End buttons
-
 
 CreditsTab:CreateButton({
    Name = "Git Hub",
@@ -160,5 +150,5 @@ CreditsTab:CreateButton({
    end,
 })
 
-Rayfield:Notify({Title = "Success", Content = "Thanks for using♥️", Duration = 6}) 
+Rayfield:Notify({Title = "Success", Content = "Thanks for using♥️", Duration = 3}) 
 -- USE THIS ON YOUR OWN RISK
