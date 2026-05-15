@@ -1,6 +1,6 @@
 -- This script are free and have no key!
 -- You can use this script and change
--- If NFT battle have new update and script dont work, write me on git hub
+-- If NFT battle have new update and script dont work, write me on Discord "Formalce"
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
@@ -8,7 +8,7 @@ local Window = Rayfield:CreateWindow({
    LoadingTitle = "Loading...",
    LoadingSubtitle = "by bELKAopex",
    ConfigurationSaving = { Enabled = false },
-   KeySystem = false
+   KeySystem = true
 })
 
 local autoSellEnabled = false
@@ -37,6 +37,8 @@ local UrusTab = Window:CreateTab("URUS", "car")
 local CyberTab = Window:CreateTab("Cyber", "car")
 local CreditsTab = Window:CreateTab("Credits", "info")
 -- End tabs
+
+
 local function ServerSell()
     local args = {
         "Sell",
@@ -76,6 +78,8 @@ task.spawn(function()
     end
 end)
 -- End auto cases open function 
+
+
 -- Auto Sell
 MainTab:CreateToggle({
    Name = "Auto Sell",
@@ -85,19 +89,23 @@ MainTab:CreateToggle({
    end,
 })
 
+
 MainTab:CreateSlider({
    Name = "Sell Interval",
    Range = {1, 60},
    Increment = 1,
    Suffix = "sec",
-   CurrentValue = 10,
+   CurrentValue = 5,
    Callback = function(Value) sellInterval = Value end,
 })
 -- End auto sell
+
+
 MainTab:CreateButton({
    Name = "Destroy GUI",
    Callback = function() Rayfield:Destroy() end,
 })
+
 
 -- Open cases settings
 local function AddFarmButtons(tab, caseInternalName)
@@ -119,6 +127,8 @@ local function AddFarmButtons(tab, caseInternalName)
     end
 end
 -- End open cases settings
+
+
 -- Buttons
 AddFarmButtons(TrashTab, "Trash")
 AddFarmButtons(BeggarTab, "Beggar")
@@ -140,6 +150,8 @@ AddFarmButtons(PorscheTab, "Porsche 911")
 AddFarmButtons(UrusTab, "URUS")
 AddFarmButtons(CyberTab, "Cyber")
 -- End buttons
+
+
 CreditsTab:CreateButton({
    Name = "Git Hub",
    Callback = function()
@@ -148,6 +160,5 @@ CreditsTab:CreateButton({
    end,
 })
 
-Rayfield:Notify({Title = "Success", Content = "Thanks for using♥️", Duration = 6})
--- YOU CAN GET BAN FOR THIS SCRIPT 
+Rayfield:Notify({Title = "Success", Content = "Thanks for using♥️", Duration = 6}) 
 -- USE THIS ON YOUR OWN RISK
