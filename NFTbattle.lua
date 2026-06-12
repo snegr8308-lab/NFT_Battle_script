@@ -30,12 +30,20 @@ local DreamTab = Window:CreateTab("Dream", "star")
 local BloodyTab = Window:CreateTab("Bloody Night", "star")
 local NinjaTab = Window:CreateTab("Ninja Turtles", "star")
 local DeskTab = Window:CreateTab("Desk Calendars", "star")
+
+-- Новые кейсы с фото
+local MonarchTab = Window:CreateTab("Monarch", "star")
+local RadioactiveTab = Window:CreateTab("Radioactive", "star")
+local AngelTab = Window:CreateTab("Angel", "star")
+
 local M5Tab = Window:CreateTab("M5 F90", "car")
 local G63Tab = Window:CreateTab("G63", "car")
 local PorscheTab = Window:CreateTab("Porsche 911", "car")
 local UrusTab = Window:CreateTab("URUS", "car")
 local CyberTab = Window:CreateTab("Cyber", "car")
 local CreditsTab = Window:CreateTab("Credits", "info")
+-- End tabs
+
 
 local function ServerSell()
     local args = {
@@ -75,6 +83,8 @@ task.spawn(function()
         task.wait(sellInterval)
     end
 end)
+-- End auto cases open function 
+
 
 -- Auto Sell
 MainTab:CreateToggle({
@@ -94,6 +104,8 @@ MainTab:CreateSlider({
    CurrentValue = 5,
    Callback = function(Value) sellInterval = Value end,
 })
+-- End auto sell
+
 
 MainTab:CreateButton({
    Name = "Destroy GUI",
@@ -120,6 +132,8 @@ local function AddFarmButtons(tab, caseInternalName)
         })
     end
 end
+-- End open cases settings
+
 
 -- Buttons
 AddFarmButtons(TrashTab, "Trash")
@@ -136,11 +150,19 @@ AddFarmButtons(DreamTab, "Dream")
 AddFarmButtons(BloodyTab, "Bloody Night")
 AddFarmButtons(NinjaTab, "Ninja Turtles")
 AddFarmButtons(DeskTab, "Desk Calendars")
+
+-- Привязка кнопок для новых кейсов
+AddFarmButtons(MonarchTab, "Monarch")
+AddFarmButtons(RadioactiveTab, "Radioactive")
+AddFarmButtons(AngelTab, "Angel")
+
 AddFarmButtons(M5Tab, "M5 F90")
 AddFarmButtons(G63Tab, "G63")
 AddFarmButtons(PorscheTab, "Porsche 911")
 AddFarmButtons(UrusTab, "URUS")
 AddFarmButtons(CyberTab, "Cyber")
+-- End buttons
+
 
 CreditsTab:CreateButton({
    Name = "Git Hub",
