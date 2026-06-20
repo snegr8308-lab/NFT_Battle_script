@@ -35,6 +35,8 @@ local DeskTab = Window:CreateTab("Desk Calendars", "star")
 local MonarchTab = Window:CreateTab("Monarch", "star")
 local RadioactiveTab = Window:CreateTab("Radioactive", "star")
 local AngelTab = Window:CreateTab("Angel", "star")
+local DioTab = Window:CreateTab("Dio", "star")
+local DeathNoteTab = Window:CreateTab("Death Note", "star") -- Новая вкладка для Death Note
 
 local M5Tab = Window:CreateTab("M5 F90", "car")
 local G63Tab = Window:CreateTab("G63", "car")
@@ -155,6 +157,8 @@ AddFarmButtons(DeskTab, "Desk Calendars")
 AddFarmButtons(MonarchTab, "Monarch")
 AddFarmButtons(RadioactiveTab, "Radioactive")
 AddFarmButtons(AngelTab, "Angel")
+AddFarmButtons(DioTab, "Dio")
+AddFarmButtons(DeathNoteTab, "Death Note") -- Кнопки для Death Note
 
 AddFarmButtons(M5Tab, "M5 F90")
 AddFarmButtons(G63Tab, "G63")
