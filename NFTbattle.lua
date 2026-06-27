@@ -37,7 +37,8 @@ local RadioactiveTab = Window:CreateTab("Radioactive", "star")
 local AngelTab = Window:CreateTab("Angel", "star")
 local DioTab = Window:CreateTab("Dio", "star")
 local DeathNoteTab = Window:CreateTab("Death Note", "star")
-local RedoTab = Window:CreateTab("REDO", "star") -- Новая вкладка для кейса REDO
+local RedoTab = Window:CreateTab("REDO", "star")
+local TsumTab = Window:CreateTab("TSUM", "star") -- Новая вкладка для кейса TSUM
 
 local M5Tab = Window:CreateTab("M5 F90", "car")
 local G63Tab = Window:CreateTab("G63", "car")
@@ -160,7 +161,8 @@ AddFarmButtons(RadioactiveTab, "Radioactive")
 AddFarmButtons(AngelTab, "Angel")
 AddFarmButtons(DioTab, "Dio")
 AddFarmButtons(DeathNoteTab, "Death Note")
-AddFarmButtons(RedoTab, "REDO") -- Кнопки фарма для кейса REDO
+AddFarmButtons(RedoTab, "REDO")
+AddFarmButtons(TsumTab, "TSUM") -- Кнопки фарма для кейса TSUM
 
 AddFarmButtons(M5Tab, "M5 F90")
 AddFarmButtons(G63Tab, "G63")
